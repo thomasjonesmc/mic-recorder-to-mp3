@@ -1,6 +1,6 @@
 Forked from [mic-recorder-to-mp3](https://github.com/closeio/mic-recorder-to-mp3)
 
-This branch modifies the getUserMedia to remove echoCancellation, autoGainControl and noiseSuppression.
+This fork modifies the getUserMedia to remove echoCancellation, autoGainControl and noiseSuppression.
 
 # Microphone Recorder to Mp3
 
