@@ -94,7 +94,11 @@ class MicRecorder {
     const audio = this.config.deviceId ? { deviceId: { exact: this.config.deviceId } } : true;
 
     return new Promise((resolve, reject) => {
-      navigator.mediaDevices.getUserMedia({ audio })
+      navigator.mediaDevices.getUserMedia({ audio: {
+          echoCancellation: false,
+          autoGainControl: false,
+          noiseSuppression: false
+        }})
         .then(stream => {
           this.addMicrophoneListener(stream);
           resolve(stream);

@@ -1,3 +1,7 @@
+Forked from [mic-recorder-to-mp3](https://github.com/closeio/mic-recorder-to-mp3)
+
+This branch modifies the getUserMedia to remove echoCancellation, autoGainControl and noiseSuppression.
+
 # Microphone Recorder to Mp3
 
 Record your microphone audio input and get an ```audio/mp3``` file in the end.

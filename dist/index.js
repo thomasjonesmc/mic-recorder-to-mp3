@@ -15920,7 +15920,12 @@ var MicRecorder = function () {
       var audio = this.config.deviceId ? { deviceId: { exact: this.config.deviceId } } : true;
 
       return new Promise(function (resolve, reject) {
-        navigator.mediaDevices.getUserMedia({ audio: audio }).then(function (stream) {
+        navigator.mediaDevices.getUserMedia({ audio: {
+            echoCancellation: false,
+            autoGainControl: false,
+            noiseSuppression: false
+          }})
+          .then(function (stream) {
           _this2.addMicrophoneListener(stream);
           resolve(stream);
         }).catch(function (err) {
